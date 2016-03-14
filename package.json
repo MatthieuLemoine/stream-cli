@@ -1,0 +1,28 @@
+{
+  "name": "stream-cli",
+  "version": "1.0.0",
+  "description": "A CLI using streams",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MatthieuLemoine/stream-cli.git"
+  },
+  "keywords": [
+    "stream",
+    "js",
+    "cli"
+  ],
+  "author": "MatthieuLemoine",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MatthieuLemoine/stream-cli/issues"
+  },
+  "homepage": "https://github.com/MatthieuLemoine/stream-cli#readme",
+  "dependencies": {
+    "figlet": "^1.1.1",
+    "through2": "^2.0.1"
+  }
+}

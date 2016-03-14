@@ -1,0 +1,21 @@
+{
+  "title"          : "Stream CLI",
+  "banner"         : "Stream CLI",
+  "welcome"        : "Welcome in the stream CLI",
+  "hint"           : "Type help to display the list of available commands",
+  "commands"       : [
+    {
+      "name"       : "hello",
+      "handler"    : "hello",
+      "description": "Just a Hello World command"
+    },{
+      "name"       : "junk",
+      "handler"    : "junk",
+      "description": "Just a junk command"
+    },{
+      "name"       : "help",
+      "handler"    : "help",
+      "description": "Print this command list"
+    }
+  ]
+}
