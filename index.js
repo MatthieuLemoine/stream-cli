@@ -1,3 +1,5 @@
+#!/usr/bin/node
+
 'use strict';
 let config   = require('./cli/config.json');
 let figlet   = require('figlet');
