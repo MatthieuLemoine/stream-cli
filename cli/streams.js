@@ -2,10 +2,11 @@
 let through  = require('through2');
 let config   = require('./config.json');
 let commands = require('./commands.js');
+let chalk    = require('chalk');
 
 module.exports = {
-  ask         : ask,
-  handleInput : handleInput
+  handleInput : handleInput,
+  prompt      : prompt
 };
 
 function handleInput(){
@@ -26,13 +27,17 @@ function handleInput(){
           next();
         });
     }
+    else{
+      this.push('Command not found : ' + chunk);
+      next();
+    }
   });
 }
 
 // Command prompt
-function ask(){
+function prompt(){
   return through({decodeStrings:false},function(chunk,_,next){
-    this.push(chunk + '\n' + '> ');
+    this.push(chunk + '\n' + chalk.blue(config.prompt + ' '));
     next();
   });
 }

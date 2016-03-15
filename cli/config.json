@@ -3,6 +3,7 @@
   "banner"         : "Stream CLI",
   "welcome"        : "Welcome in the stream CLI",
   "hint"           : "Type help to display the list of available commands",
+  "prompt"         : "scli$",
   "commands"       : [
     {
       "name"       : "hello",
@@ -16,6 +17,14 @@
       "name"       : "help",
       "handler"    : "help",
       "description": "Print this command list"
+    },{
+      "name"       : "clear",
+      "handler"    : "clear",
+      "description": "Clear console"
+    },{
+      "name"       : "load",
+      "handler"    : "load",
+      "description": "A nice loading"
     }
   ]
 }

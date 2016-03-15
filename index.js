@@ -4,6 +4,7 @@
 let config   = require('./cli/config.json');
 let figlet   = require('figlet');
 let streams  = require('./cli/streams.js');
+let chalk    = require('chalk');
 
 process.title = config.title;
 process.stdin.setEncoding('utf8');
@@ -14,10 +15,11 @@ process.stdout.write(config.welcome + '\n');
 process.stdout.write('\n');
 // Display hint message
 process.stdout.write(config.hint + '\n');
+process.stdout.write('\n');
 // Prompt
-process.stdout.write('> ');
+process.stdout.write(chalk.blue(config.prompt+' '));
 // Main stream
 process.stdin
   .pipe(streams.handleInput())
-  .pipe(streams.ask())
+  .pipe(streams.prompt())
   .pipe(process.stdout);

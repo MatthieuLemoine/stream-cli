@@ -22,10 +22,11 @@
   },
   "homepage": "https://github.com/MatthieuLemoine/stream-cli#readme",
   "dependencies": {
+    "chalk": "^1.1.1",
     "figlet": "^1.1.1",
     "through2": "^2.0.1"
   },
-  "bin":{
-    "stream-cli":"index.js"
+  "bin": {
+    "stream-cli": "index.js"
   }
 }
