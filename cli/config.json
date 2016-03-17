@@ -1,7 +1,7 @@
 {
   "title"          : "Stream CLI",
   "banner"         : "Stream CLI",
-  "welcome"        : "Welcome in the stream CLI",
+  "welcome"        : "Greetings master",
   "hint"           : "Type help to display the list of available commands",
   "prompt"         : "scli$",
   "commands"       : [

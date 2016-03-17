@@ -11,7 +11,8 @@ process.stdin.setEncoding('utf8');
 // Banner
 process.stdout.write(figlet.textSync(config.banner) + '\n');
 // Welcome message
-process.stdout.write(config.welcome + '\n');
+let username = process.env.USER.toLowerCase().substring(0,1).toUpperCase()+process.env.USER.substring(1);
+process.stdout.write(config.welcome + ' ' + username + '\n');
 process.stdout.write('\n');
 // Display hint message
 process.stdout.write(config.hint + '\n');
