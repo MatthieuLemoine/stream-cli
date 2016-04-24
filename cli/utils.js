@@ -5,14 +5,21 @@ module.exports = {
   initCap,
 };
 
-function repeat(pattern, count) {
-  if (count < 1) return '';
+/**
+ * Repeat a pattern n times
+ * @method repeat
+ * @param  {String}  pattern The pattern to repeat
+ * @param  {Integer} n       The repeat's count
+ * @return {String}
+ */
+function repeat(pattern, n) {
+  if (n < 1) return '';
   let result = '';
-  while (count > 1) {
-    if (count & 1) {
+  while (n > 1) {
+    if (n & 1) {
       result += pattern;
     }
-    count >>= 1;
+    n >>= 1;
     pattern += pattern;
   }
   return result + pattern;

@@ -25,6 +25,10 @@
       "name"       : "load",
       "handler"    : "load",
       "description": "A nice loading"
+    },{
+      "name"        : "exit",
+      "handler"     : "exit",
+      "description" : "Exit cli"
     }
   ]
 }

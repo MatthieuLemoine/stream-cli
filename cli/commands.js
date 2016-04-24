@@ -5,6 +5,7 @@ const chalk    = require('chalk');
 
 module.exports = {
   clear,
+  exit,
   hello,
   help,
   junk,
@@ -27,6 +28,10 @@ function clear() {
     stdout += '\x1B[0f';
     resolve(stdout);
   });
+}
+
+function exit() {
+  process.exit();
 }
 
 function hello() {
