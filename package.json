@@ -16,13 +16,14 @@
     "cli"
   ],
   "author": "MatthieuLemoine",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/MatthieuLemoine/stream-cli/issues"
   },
   "homepage": "https://github.com/MatthieuLemoine/stream-cli#readme",
   "dependencies": {
     "chalk": "^1.1.1",
+    "cli-table2": "^0.2.0",
     "figlet": "^1.1.1",
     "through2": "^2.0.1"
   },

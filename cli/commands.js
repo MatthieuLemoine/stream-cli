@@ -2,6 +2,7 @@
 const config   = require('./config.json');
 const utils    = require('./utils.js');
 const chalk    = require('chalk');
+const Table    = require('cli-table2');
 
 module.exports = {
   clear,
@@ -42,10 +43,14 @@ function hello() {
 
 function help() {
   return new Promise((resolve) => {
-    const out = config.commands.reduce(
-      (prev, command) => `${prev}${chalk.green(command.name)} : ${command.description}\n`
-    , '');
-    resolve(out.substring(0, out.length - 1));
+    const table = new Table({
+      head : ['Command', 'Description'],
+      colWidths : [20, 50],
+    });
+    config.commands.forEach(
+      command => table.push([chalk.green(command.name), command.description])
+    );
+    resolve(table.toString());
   });
 }
 
